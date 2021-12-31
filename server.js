@@ -9,8 +9,9 @@ const {messageFormater} = require("./utild/chat");
 const PORT = process.env.PORT || 3000;
 // app.use(express.static(path.join(__dirname,"Skribbl","public",'index.html')));
 let word = '';
+app.use(express.static("./Skribbl/public"))
 app.get("/",(req,res)=>{
-  res.sendFile(path.join("Skribbl","build"))
+  res.sendFile(path.join(__dirname,"Skribbl","public","index.html"))
 })
 
 io.on('connection', function(socket) {
