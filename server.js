@@ -7,8 +7,11 @@ const path = require("path")
 const {Join, getUser, Current} = require('./utild/func');
 const {messageFormater} = require("./utild/chat");
 const PORT = process.env.PORT || 3000;
-app.use(express.static(path.join(__dirname,"kribble","public",'index.html')));
+app.use(express.static(path.join(__dirname,"Skribbl","public",'index.html')));
 let word = '';
+// app.get("/",(req,res)=>{
+//   res.sendFile(path.join(__dirname,"kribble"))
+// })
 
 io.on('connection', function(socket) {
   console.log('user connected');
