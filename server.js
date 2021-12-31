@@ -7,7 +7,7 @@ const cors = require('cors');
 const {Join, getUser, Current} = require('./utild/func');
 const {messageFormater} = require("./utild/chat");
 const PORT = process.env.PORT || 3000;
-app.use(express.static("kribble",'build'));
+app.use(express.static("kribble"));
 let word = '';
 
 io.on('connection', function(socket) {
