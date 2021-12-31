@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // app.use(express.static(path.join(__dirname,"Skribbl","public",'index.html')));
 let word = '';
 app.get("/",(req,res)=>{
-  res.sendFile(path.join(__dirname,"Skribbl","public"))
+  res.sendFile(path.join("Skribbl","public"))
 })
 
 io.on('connection', function(socket) {
