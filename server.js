@@ -3,11 +3,11 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const cors = require('cors');
-const path = require("path")
+// const path = require("path")
 const {Join, getUser, Current} = require('./utild/func');
 const {messageFormater} = require("./utild/chat");
 const PORT = process.env.PORT || 3000;
-app.use(express.static(path.join(__dirname,"kribble",'build')));
+app.use(express.static("kribble",'build'));
 let word = '';
 
 io.on('connection', function(socket) {
